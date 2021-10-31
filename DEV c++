@@ -12,11 +12,11 @@ class Calculator{
 			cout<<"-----------------------------------------------------"<<endl;
 			cout<<"                       Your Options                  "<<endl;
 			cout<<"-----------------------------------------------------"<<endl;
-			cout<<"                        + Add			    	    "<<endl;
-    		cout<<"     	                - Subtract		            "<<endl;
-    		cout<<"                        * Multiply			        "<<endl;
-    		cout<<"                        / Divide			        "<<endl;
-    		cout<<"-----------------------------------------------------"<<endl;
+			cout<<"                        + Add			    "<<endl;
+    			cout<<"     	                - Subtract		    "<<endl;
+    			cout<<"                        * Multiply	            "<<endl;
+    			cout<<"                        / Divide			    "<<endl;
+    			cout<<"-----------------------------------------------------"<<endl;
 		}
 		void add(int num1, int num2){
 			int result;

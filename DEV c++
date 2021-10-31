@@ -1,0 +1,81 @@
+#include <iostream>
+#include <cstdlib>
+#include <cstring>
+
+using namespace std;
+
+class Calculator{
+	public  :
+		void menu(){
+			cout<<"\n\n"<<endl;
+			cout<<"   Welcome to an Object Oriented Calculator Program  "<<endl;
+			cout<<"-----------------------------------------------------"<<endl;
+			cout<<"                       Your Options                  "<<endl;
+			cout<<"-----------------------------------------------------"<<endl;
+			cout<<"                        + Add			    	    "<<endl;
+    		cout<<"     	                - Subtract		            "<<endl;
+    		cout<<"                        * Multiply			        "<<endl;
+    		cout<<"                        / Divide			        "<<endl;
+    		cout<<"-----------------------------------------------------"<<endl;
+		}
+		void add(int num1, int num2){
+			int result;
+			result = num1 + num2;
+    		cout << "  Result of Addition =  " << result << endl;
+		}
+     	void subtract(int num1, int num2){
+		 	int result;
+		 	result = num1 - num2;
+    		cout << "  Result of Substraction =  " << result << endl;
+		 }
+    	void multiply(int num1 , int num2){
+    		int result;
+		 	result = num1 * num2;
+    		cout << "  Result of Multiplication =  " << result << endl;
+		}
+    	void divide(int num1 , int num2){
+    		int result;
+		 	result = num1 / num2;
+    		cout << "  Result of Devision =  " << result << endl;
+		}
+		void choice_of_mathematical_act(){
+			char option;
+			int num11,num22;
+			cout << "  Enter your choice from above = ";
+    		cin >> option;
+    		cout << endl;
+        	cout << "  Enter first number  = " ;
+       		cin >> num11;
+       		cout << endl;
+        	cout << "  Enter second number = ";
+        	cin >> num22;
+        	cout << endl;
+    		switch(option){
+        		case '+': add(num11,num22);      break;
+        		case '-': subtract(num11,num22); break;
+        		case '*': multiply(num11,num22); break;
+        		case '/': divide(num11,num22);   break;
+    		default: cout << "Not a valid choice" << endl;
+   	       }
+		}
+	
+};
+
+
+int main(int argc, char** argv) {
+	char choice;
+	Calculator num;
+	num.menu();	
+	do{
+    	num.choice_of_mathematical_act();
+    	cout <<"\n";
+    	cout<<"-----------------------------------------------------"<<endl;
+   		cout<<"   Press y to calculate again or n to exit  =  ";
+   		cin>>choice;
+   		cout<<"-----------------------------------------------------"<<endl;
+   		cout<<endl;
+    }  while(choice =='y');
+	system("PAUSE");
+    return EXIT_SUCCESS;	
+	
+}
